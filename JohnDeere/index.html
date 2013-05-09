@@ -11,31 +11,86 @@
         <script src="jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="js/hello-world.js" type="text/javascript"></script>
+        
+        
     </head> 
     <body> 
         
         <div data-role="page" id="home">
-            <div data-role="header">
-                <h1>Hello, World!</h1>
+            <div style="border: none;" data-role="header">
+                <h1 style="font-size: 28px;">iFactory</h1>
             </div>
             <div data-role="content">
-                <h1>Welcome to Icenium!</h1>
-                <p>
-                    Icenium&trade; enables you to build cross-platform device applications regardless of your 
-                    development platform by combining the convenience of a local development toolset with the 
-                    power and flexibility of the cloud.
-                </p>
+                <div>
+                 <img border="0" src="images/logo-john-deere.gif" alt="Logo, John Deere" class="logoClass"/>
+                   <div class="space25" ></div>
+                    </div>
+                <form id="loginForm" >
+                    
+                   
+                    <label for="usernameInput">UserName:</label>
+                    <input type="text" name="name" id="usernameInput" data-mini="true" />
+                     
+                    
+                   
+                    <label for="passwordInput">Password:</label>
+                    <input type="password" name="name" id="passwordInput" data-mini="true" />
+                   <div class="space40" ></div>
+                   <a href="#todoPage" data-role="button" data-icon="arrow-r" data-iconpos="right" class="linkSubmit" data-transition="slide">Submit</a>
+                   
+                </form>
+                
             </div>
-            <div class="nav">
+          <!--  <div class="nav">
                 <ul data-role="listview">
                     <li><a href="#page1" data-transition="slide">UI Interaction Example</a></li>
                     <li><a href="#page2" data-transition="slide">Geolocation Example</a></li>
                 </ul>
-            </div>
+            </div> data-add-back-btn="true" -->
             <div data-role="footer" data-position="fixed" data-id="oneFooter">
-                <span class="footerText">Built with Icenium&trade;</span>
+                <span class="footerText">John Deere&copy;</span>
             </div>
         </div>
+        
+          <div data-role="page" id="todoPage" >
+            <div data-role="header">
+                <div class="svg-menu">
+                  <img src="images/ThreeLinesIcon.svg"/>
+                  <h1>TODO</h1>
+                </div>
+               
+            </div>
+            <div data-role="content">
+                
+               <ul data-role="listview">
+            	<li data-icon="check" >
+                    InSufficent staffing at PT1100 </li>
+                <li data-icon="check" > Too Many Quotes at PT110A </li>
+                <li data-icon="check" > Material Shortage at Transmission Line </li>
+                <li data-icon="check" > Poor Efficiency at Engine Line </li>
+                <li data-icon="check" > Voice Memo: Check Clock in Time </li>
+                <li data-icon="check" > New CIPP Report Ready </li>
+               </ul>
+                
+                
+               
+                <div align="center">
+                 <!--   <div data-role="controlgroup" style="display:inline-block;" data-type="horizontal">
+                        <button data-icon="delete" onClick="sayHelloReset();">Reset</button>
+                        <button data-theme="a" onClick="sayHello();">Submit</button>
+                    </div> -->
+                    
+                   
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="ui-bar"  data-id="oneFooter">
+                
+                
+                <a href="#" data-role="button">Lines</a>
+                <a href="#">Dept.</a>
+             </div>
+        </div>
+        
         
         <!-- The following page demonstrates basic user interaction. -->
         <div data-role="page" id="page1" data-add-back-btn="true">
